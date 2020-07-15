@@ -1,0 +1,10 @@
+.pokemon__container {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.pokemon__name {
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=Pokemon.module.css.map */
