@@ -15,7 +15,26 @@
 }
 
 .detailedPokemon__image {
-  max-height: 33%;
-  min-width: 33%;
+  max-height: 50%;
+  min-width: 50%;
+}
+
+.detailedPokemon__name {
+  text-transform: capitalize;
+}
+
+.detailedPokemon__previous {
+  height: 50px;
+  width: 200px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.detailedPokemon__previous:hover {
+  opacity: 0.5;
+  border: 2px solid #000;
 }
 /*# sourceMappingURL=DetailedPokemon.module.css.map */

@@ -26,4 +26,10 @@
 .pokemon__name {
   text-transform: capitalize;
 }
+
+@media screen and (max-width: 480px) {
+  .pokemon__container {
+    border: none;
+  }
+}
 /*# sourceMappingURL=Pokemon.module.css.map */
