@@ -1,13 +1,17 @@
 import React from 'react';
-import './App.css';
+import { Switch, Route, BrowserRouter } from 'react-router-dom';
 
 import MainPage from '../components/MainPage/MainPage';
+import DetailedPokemon from '../components/Pokemon/DetailedPokemon/DetailedPokemon';
 
 function App() {
 	return (
-		<div className='App'>
-			<MainPage />
-		</div>
+		<BrowserRouter>
+			<Switch>
+				<Route path='/' exact component={MainPage} />
+				<Route path='/pokemon' component={DetailedPokemon} />
+			</Switch>
+		</BrowserRouter>
 	);
 }
 

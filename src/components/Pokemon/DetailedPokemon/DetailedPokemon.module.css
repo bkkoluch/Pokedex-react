@@ -1,0 +1,21 @@
+.detailedPokemon__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.detailedPokemon__image {
+  max-height: 33%;
+  min-width: 33%;
+}
+/*# sourceMappingURL=DetailedPokemon.module.css.map */
