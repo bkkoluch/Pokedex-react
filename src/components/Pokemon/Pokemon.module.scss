@@ -6,14 +6,30 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	transition: all 0.3s;
+	transition: all ease 0.5s;
 	&:hover {
-		background-color: rgb(204, 204, 204);
+		background-color: rgb(31, 150, 201);
+		.pokemon__name {
+			color: rgb(255, 255, 255);
+		}
+		.pokemon__image {
+			display: none;
+		}
+		.pokemon__image--back {
+			position: relative;
+			transition: all ease 0.5s;
+			opacity: 1;
+		}
 	}
 }
 
 .pokemon__name {
 	text-transform: capitalize;
+}
+
+.pokemon__image--back {
+	position: absolute;
+	opacity: 0;
 }
 
 @media screen and (max-width: 480px) {

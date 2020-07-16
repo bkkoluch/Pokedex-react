@@ -15,6 +15,9 @@ export default function Pokedex() {
 						image={require('../../assets/sprites/pokemon/' +
 							`${index + 1}` +
 							'.png')}
+						imageBack={require('../../assets/sprites/pokemonFromTheBack/' +
+							`${index + 1}` +
+							'.png')}
 					/>
 				))}
 			</ul>

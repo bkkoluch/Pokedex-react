@@ -25,7 +25,16 @@ export default function Pokemon(props) {
 			className={styles.pokemon__container}
 			onClick={handleRedirectToDetailedPokemon}
 		>
-			<img src={props.image} alt={`${props.name} image`} />
+			<img
+				src={props.image}
+				alt={`${props.name} image`}
+				className={styles.pokemon__image}
+			/>
+			<img
+				src={props.imageBack}
+				alt={`${props.name} image from the back`}
+				className={styles['pokemon__image--back']}
+			/>
 			<h5 className={styles.pokemon__name}>{props.name}</h5>
 		</div>
 	);
