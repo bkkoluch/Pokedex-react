@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,mBAAmB,CAAC;EACnB,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,GAAG,CAAC,KAAK,CAAC,KAAY;EAC9B,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,QAAQ;CAIpB;;AAZD,AASC,mBATkB,AASjB,MAAM,CAAC;EACP,gBAAgB,EAAE,OAAkB;CACpC;;AAGF,AAAA,cAAc,CAAC;EACd,cAAc,EAAE,UAAU;CAC1B",
+    "sources": [
+        "Pokemon.module.scss"
+    ],
+    "names": [],
+    "file": "Pokemon.module.css"
+}
