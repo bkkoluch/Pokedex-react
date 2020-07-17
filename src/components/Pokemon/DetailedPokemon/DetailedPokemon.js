@@ -26,7 +26,9 @@ export default function DetailedPokemon(props) {
 				src={props.location.image}
 				alt={`${props.location.name} image`}
 			/>
-			<h2>{props.location.name}</h2>
+			<h2 className={styles.detailedPokemon__name}>
+				{props.location.name}
+			</h2>
 		</div>
 	);
 }

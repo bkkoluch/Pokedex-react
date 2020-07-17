@@ -5,7 +5,7 @@ import Pokedex from '../Pokedex/Pokedex.js';
 export default function MainPage() {
 	return (
 		<div>
-			<p>Welcome to Pokedex React app</p>
+			<p>Search through the Pokedex for info about the Pokemon</p>
 			<Pokedex />
 		</div>
 	);

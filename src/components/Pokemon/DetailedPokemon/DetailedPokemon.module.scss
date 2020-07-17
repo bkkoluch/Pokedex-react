@@ -9,3 +9,20 @@
 	max-height: 33%;
 	min-width: 33%;
 }
+
+.detailedPokemon__name {
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.detailedPokemon__previous {
+	height: 50px;
+	width: 200px;
+	align-self: flex-start;
+	text-transform: uppercase;
+	transition: all 0.3s;
+	&:hover {
+		opacity: 0.5;
+		border: 2px solid #000;
+	}
+}
