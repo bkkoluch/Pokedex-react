@@ -1,3 +1,6 @@
+$fierce: rgb(190, 70, 70);
+$dark: rgb(60, 60, 60);
+
 .detailedPokemon__container {
 	display: flex;
 	flex-direction: column;
@@ -6,7 +9,6 @@
 }
 
 .detailedPokemon__image {
-	max-height: 33%;
 	min-width: 33%;
 }
 
@@ -16,13 +18,53 @@
 }
 
 .detailedPokemon__previous {
+	position: relative;
+	opacity: 0;
 	height: 50px;
-	width: 200px;
+	width: 100px;
 	align-self: flex-start;
 	text-transform: uppercase;
-	transition: all 0.3s;
-	&:hover {
-		opacity: 0.5;
-		border: 2px solid #000;
+	transition: all 0.5s;
+	background-color: transparent;
+	border: none;
+	outline: none;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		height: 0;
+		width: 0;
+		background: $fierce;
+		transition: all 0.7s;
 	}
+
+	&:before {
+		top: 0;
+		left: 0;
+	}
+
+	&:after {
+		bottom: 0;
+		right: 0;
+	}
+
+	&:hover {
+		opacity: 1;
+		&::before,
+		&::after {
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: $fierce;
+		}
+	}
+}
+
+.detailedPokemon__card {
+	width: 33%;
+	display: inherit;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid $dark;
 }
