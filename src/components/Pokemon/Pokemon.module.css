@@ -1,8 +1,19 @@
+.pokemon__name {
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.pokemon__image--back {
+  position: absolute;
+  opacity: 0;
+}
+
 .pokemon__container {
   position: relative;
   width: 200px;
   height: 200px;
-  border: 1px solid black;
+  border: 1px solid #3c3c3c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,11 +32,11 @@
 }
 
 .pokemon__container:hover {
-  border: 1px solid #bb4949;
+  border: 1px solid #be4646;
 }
 
 .pokemon__container:hover .pokemon__name {
-  color: #bb4949;
+  color: #be4646;
 }
 
 .pokemon__container:hover .pokemon__image {
@@ -58,36 +69,19 @@
 }
 
 .pokemon__container::before {
-  border-bottom: 3px solid #bb4949;
-  border-left: 3px solid #bb4949;
+  border-bottom: 3px solid #be4646;
+  border-left: 3px solid #be4646;
   -webkit-transform-origin: 100% 0%;
 }
 
 .pokemon__container::after {
-  border-top: 3px solid #bb4949;
-  border-right: 3px solid #bb4949;
+  border-top: 3px solid #be4646;
+  border-right: 3px solid #be4646;
   -webkit-transform-origin: 0% 100%;
 }
 
 .pokemon__container:hover::after,
 .pokemon__container:hover::before {
   -webkit-transform: scale(1);
-}
-
-.pokemon__name {
-  margin: 0;
-  text-transform: capitalize;
-  font-size: 20px;
-}
-
-.pokemon__image--back {
-  position: absolute;
-  opacity: 0;
-}
-
-@media screen and (max-width: 480px) {
-  .pokemon__container {
-    border: none;
-  }
 }
 /*# sourceMappingURL=Pokemon.module.css.map */

@@ -21,14 +21,17 @@ export default function DetailedPokemon(props) {
 			>
 				Back
 			</button>
-			<img
-				className={styles.detailedPokemon__image}
-				src={props.location.image}
-				alt={`${props.location.name} image`}
-			/>
-			<h2 className={styles.detailedPokemon__name}>
-				{props.location.name}
-			</h2>
+
+			<div className={styles.detailedPokemon__card}>
+				<img
+					className={styles.detailedPokemon__image}
+					src={props.location.image}
+					alt={`${props.location.name}`}
+				/>
+				<h2 className={styles.detailedPokemon__name}>
+					{props.location.name}
+				</h2>
+			</div>
 		</div>
 	);
 }

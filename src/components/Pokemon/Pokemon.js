@@ -27,12 +27,12 @@ export default function Pokemon(props) {
 		>
 			<img
 				src={props.image}
-				alt={`${props.name} image`}
+				alt={`${props.name} from the front`}
 				className={styles.pokemon__image}
 			/>
 			<img
 				src={props.imageBack}
-				alt={`${props.name} image from the back`}
+				alt={`${props.name} from the back`}
 				className={styles['pokemon__image--back']}
 			/>
 			<h5 className={styles.pokemon__name}>{props.name}</h5>
