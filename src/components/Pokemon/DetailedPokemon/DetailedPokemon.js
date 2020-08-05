@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import styles from './DetailedPokemon.module.css';
+import { connect } from 'react-redux';
 
-export default function DetailedPokemon(props) {
+const DetailedPokemon = (props) => {
 	const [redirect, setRedirect] = useState(false);
 
 	const handleRedirectToPokedex = () => {
@@ -10,7 +11,7 @@ export default function DetailedPokemon(props) {
 	};
 
 	if (redirect) {
-		return <Redirect push to='/' />;
+		return <Redirect to='/' />;
 	}
 
 	return (
@@ -31,7 +32,26 @@ export default function DetailedPokemon(props) {
 				<h2 className={styles.detailedPokemon__name}>
 					{props.location.name}
 				</h2>
+				Skills:
+				{props.pokemonAbilities.map((ability) =>
+					ability.pokemon_id === props.location.id
+						? props.allAbilities.map((realAbility) => {
+								return ability.ability_id === realAbility.id ? (
+									<p>{realAbility.identifier}</p>
+								) : (
+									''
+								);
+						  })
+						: ''
+				)}
 			</div>
 		</div>
 	);
-}
+};
+
+const mapStateToProps = (state) => ({
+	pokemonAbilities: state.pokemon.pokemonAbilities,
+	allAbilities: state.pokemon.allAbilities,
+});
+
+export default connect(mapStateToProps)(DetailedPokemon);

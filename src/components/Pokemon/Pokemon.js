@@ -15,6 +15,7 @@ export default function Pokemon(props) {
 					pathname: '/pokemon',
 					name: props.name,
 					image: props.image,
+					id: props.id,
 				}}
 			/>
 		);
