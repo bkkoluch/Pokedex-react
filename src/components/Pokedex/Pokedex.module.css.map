@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,mBAAmB,CAAC;EACnB,OAAO,EAAE,CAAC;EACV,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,MAAM;CACvB",
-    "sources": [
-        "Pokedex.module.scss"
-    ],
-    "names": [],
-    "file": "Pokedex.module.css"
-}

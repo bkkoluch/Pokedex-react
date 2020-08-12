@@ -3,9 +3,9 @@ import { Redirect } from 'react-router-dom';
 import styles from './DetailedPokemon.module.css';
 import { connect } from 'react-redux';
 
-const DetailedPokemon = (props) => {
+const DetailedPokemon = (props: any) => {
 	const [redirect, setRedirect] = useState(false);
-
+	console.log(props);
 	const handleRedirectToPokedex = () => {
 		setRedirect(true);
 	};
@@ -26,20 +26,19 @@ const DetailedPokemon = (props) => {
 			<div className={styles.detailedPokemon__card}>
 				<img
 					className={styles.detailedPokemon__image}
-					src={props.location.image}
-					alt={`${props.location.name}`}
+					src={props.location.state.image}
+					alt={`${props.location.state.name}`}
 				/>
 				<h2 className={styles.detailedPokemon__name}>
-					{props.location.name}
+					{props.location.state.name}
 				</h2>
 				<div className={styles.detailedPokemon__skills}>
 					Skills:
-					{props.pokemonAbilities.map((ability) =>
-						ability.pokemon_id === props.location.id
-							? props.allAbilities.map((realAbility) => {
-									return ability.ability_id ===
-										realAbility.id ? (
-										<p>{realAbility.identifier}</p>
+					{props.pokemonAbilities.map((ability: any) =>
+						ability.pokemon_id === props.location.state.id
+							? props.allAbilities.map((realAbility: any) => {
+									return ability.ability_id === realAbility.id ? (
+										<p key={ability}>{realAbility.identifier}</p>
 									) : (
 										''
 									);
@@ -52,7 +51,7 @@ const DetailedPokemon = (props) => {
 	);
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: any) => ({
 	pokemonAbilities: state.pokemon.pokemonAbilities,
 	allAbilities: state.pokemon.allAbilities,
 });

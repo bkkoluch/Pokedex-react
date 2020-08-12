@@ -1,14 +1,26 @@
 import React from 'react';
 import styles from './Pokedex.module.css';
 
-import Pokemon from '../Pokemon/Pokemon';
+import Pokemon from 'components/Pokemon/Pokemon';
 import { connect } from 'react-redux';
 
-const Pokedex = (props) => {
+export interface PokemonObject {
+	id: number;
+	name: string;
+	image: string;
+	imageBack: string;
+	identifier: string;
+}
+
+type State = {
+	pokemon: any;
+};
+
+const Pokedex = (props: any) => {
 	return (
 		<div>
 			<ul className={styles.pokedex__container}>
-				{props.pokemon.map((pokemon, index) => (
+				{props.pokemon.map((pokemon: PokemonObject, index: number) => (
 					<Pokemon
 						key={pokemon.id}
 						id={pokemon.id}
@@ -26,7 +38,7 @@ const Pokedex = (props) => {
 	);
 };
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: State) => ({
 	pokemon: state.pokemon.pokemon,
 });
 

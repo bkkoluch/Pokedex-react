@@ -1,7 +1,7 @@
 import React from 'react';
 import './MainPage.css';
 
-import Pokedex from '../Pokedex/Pokedex.js';
+import Pokedex from 'components/Pokedex/Pokedex';
 
 export default function MainPage() {
 	return (

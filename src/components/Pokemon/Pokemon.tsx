@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import styles from './Pokemon.module.css';
-import { Redirect } from 'react-router-dom';
-export default function Pokemon(props) {
+import { Link, Redirect } from 'react-router-dom';
+import { PokemonObject } from 'components/Pokedex/Pokedex';
+
+export default function Pokemon(props: any) {
 	const [redirect, setRedirect] = useState(false);
 
 	const handleRedirectToDetailedPokemon = () => {
@@ -13,9 +15,11 @@ export default function Pokemon(props) {
 			<Redirect
 				to={{
 					pathname: '/pokemon',
-					name: props.name,
-					image: props.image,
-					id: props.id,
+					state: {
+						name: props.name,
+						image: props.image,
+						id: props.id,
+					},
 				}}
 			/>
 		);

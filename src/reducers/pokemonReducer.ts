@@ -1,11 +1,11 @@
-import { GET_ALL_POKEMON_DATA } from '../actions/types';
+import { GET_ALL_POKEMON_DATA } from 'actions/types';
 
 const initialState = {
 	pokemon: [],
 	pokemonAbilities: [],
 };
 
-const pokemonReducer = (state = initialState, action) => {
+const pokemonReducer = (state = initialState, action: any) => {
 	switch (action.type) {
 		case GET_ALL_POKEMON_DATA:
 			return {
