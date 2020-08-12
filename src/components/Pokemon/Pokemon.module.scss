@@ -5,6 +5,7 @@ $dark: rgb(60, 60, 60);
 	margin: 0;
 	text-transform: capitalize;
 	font-size: 20px;
+	color: black;
 }
 
 .pokemon__image--back {
@@ -21,7 +22,9 @@ $dark: rgb(60, 60, 60);
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	text-decoration: none;
 	transition: all ease 3s;
+
 	&:hover {
 		border: 1px solid $fierce;
 
@@ -50,6 +53,7 @@ $dark: rgb(60, 60, 60);
 	top: 0;
 	left: 0;
 	box-sizing: border-box;
+	transform: scale(0);
 	-webkit-transform: scale(0);
 	transition: 0.5s;
 }
@@ -57,16 +61,19 @@ $dark: rgb(60, 60, 60);
 .pokemon__container::before {
 	border-bottom: 3px solid $fierce;
 	border-left: 3px solid $fierce;
+	transform-origin: 100% 0%;
 	-webkit-transform-origin: 100% 0%;
 }
 
 .pokemon__container::after {
 	border-top: 3px solid $fierce;
 	border-right: 3px solid $fierce;
+	transform-origin: 0% 100%;
 	-webkit-transform-origin: 0% 100%;
 }
 
 .pokemon__container:hover::after,
 .pokemon__container:hover::before {
+	transform: scale(1);
 	-webkit-transform: scale(1);
 }

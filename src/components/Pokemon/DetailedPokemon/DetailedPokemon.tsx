@@ -1,27 +1,14 @@
-import React, { useState } from 'react';
-import { Redirect } from 'react-router-dom';
-import styles from './DetailedPokemon.module.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import styles from './DetailedPokemon.module.css';
 
 const DetailedPokemon = (props: any) => {
-	const [redirect, setRedirect] = useState(false);
-	console.log(props);
-	const handleRedirectToPokedex = () => {
-		setRedirect(true);
-	};
-
-	if (redirect) {
-		return <Redirect to='/' />;
-	}
-
 	return (
 		<div className={styles.detailedPokemon__container}>
-			<button
-				className={styles.detailedPokemon__previous}
-				onClick={handleRedirectToPokedex}
-			>
+			<Link to='/' className={styles.detailedPokemon__previous}>
 				Back
-			</button>
+			</Link>
 
 			<div className={styles.detailedPokemon__card}>
 				<img

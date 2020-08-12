@@ -2,6 +2,7 @@
   margin: 0;
   text-transform: capitalize;
   font-size: 20px;
+  color: black;
 }
 
 .pokemon__image--back {
@@ -27,6 +28,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-decoration: none;
   -webkit-transition: all ease 3s;
   transition: all ease 3s;
 }
@@ -63,6 +65,7 @@
   left: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  transform: scale(0);
   -webkit-transform: scale(0);
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -71,16 +74,19 @@
 .pokemon__container::before {
   border-bottom: 3px solid #be4646;
   border-left: 3px solid #be4646;
+  transform-origin: 100% 0%;
   -webkit-transform-origin: 100% 0%;
 }
 
 .pokemon__container::after {
   border-top: 3px solid #be4646;
   border-right: 3px solid #be4646;
+  transform-origin: 0% 100%;
   -webkit-transform-origin: 0% 100%;
 }
 
 .pokemon__container:hover::after,
 .pokemon__container:hover::before {
+  transform: scale(1);
   -webkit-transform: scale(1);
 }
