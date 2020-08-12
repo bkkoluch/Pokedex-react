@@ -70,7 +70,7 @@
 }
 
 .detailedPokemon__card {
-  width: 33%;
+  width: 50%;
   display: inherit;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -80,5 +80,21 @@
       -ms-flex-align: center;
           align-items: center;
   border: 2px solid #3c3c3c;
+}
+
+.detailedPokemon__skills {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.detailedPokemon__skills p {
+  font-weight: normal;
+}
+
+@media screen and (max-width: 414px) {
+  .detailedPokemon__card {
+    width: calc(100% - 4px);
+  }
 }
 /*# sourceMappingURL=DetailedPokemon.module.css.map */

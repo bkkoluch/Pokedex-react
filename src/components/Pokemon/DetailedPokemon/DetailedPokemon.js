@@ -32,18 +32,21 @@ const DetailedPokemon = (props) => {
 				<h2 className={styles.detailedPokemon__name}>
 					{props.location.name}
 				</h2>
-				Skills:
-				{props.pokemonAbilities.map((ability) =>
-					ability.pokemon_id === props.location.id
-						? props.allAbilities.map((realAbility) => {
-								return ability.ability_id === realAbility.id ? (
-									<p>{realAbility.identifier}</p>
-								) : (
-									''
-								);
-						  })
-						: ''
-				)}
+				<div className={styles.detailedPokemon__skills}>
+					Skills:
+					{props.pokemonAbilities.map((ability) =>
+						ability.pokemon_id === props.location.id
+							? props.allAbilities.map((realAbility) => {
+									return ability.ability_id ===
+										realAbility.id ? (
+										<p>{realAbility.identifier}</p>
+									) : (
+										''
+									);
+							  })
+							: ''
+					)}
+				</div>
 			</div>
 		</div>
 	);
