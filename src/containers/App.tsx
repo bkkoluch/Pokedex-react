@@ -2,10 +2,10 @@ import React from 'react';
 
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { fetchPokemonData } from '../actions/pokemonActions';
+import { fetchPokemonData } from 'actions/pokemonActions';
 
-import MainPage from '../components/MainPage/MainPage';
-import DetailedPokemon from '../components/Pokemon/DetailedPokemon/DetailedPokemon';
+import MainPage from 'components/MainPage/MainPage';
+import DetailedPokemon from 'components/Pokemon/DetailedPokemon/DetailedPokemon';
 
 const App = () => {
 	const dispatch = useDispatch();

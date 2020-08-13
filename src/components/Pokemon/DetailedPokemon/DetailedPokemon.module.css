@@ -25,17 +25,18 @@
 
 .detailedPokemon__previous {
   position: relative;
-  opacity: 0;
-  height: 50px;
   width: 100px;
+  line-height: 50px;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  text-align: center;
   text-transform: uppercase;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  background-color: transparent;
-  border: none;
-  outline: none;
+  color: black;
 }
 
 .detailedPokemon__previous::before, .detailedPokemon__previous::after {
@@ -56,10 +57,6 @@
 .detailedPokemon__previous:after {
   bottom: 0;
   right: 0;
-}
-
-.detailedPokemon__previous:hover {
-  opacity: 1;
 }
 
 .detailedPokemon__previous:hover::before, .detailedPokemon__previous:hover::after {
@@ -97,4 +94,3 @@
     width: calc(100% - 4px);
   }
 }
-/*# sourceMappingURL=DetailedPokemon.module.css.map */
