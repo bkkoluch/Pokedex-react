@@ -14,6 +14,8 @@ export interface PokemonObject {
 	identifier: string;
 }
 
+//asdasd
+
 interface Pok {
 	pokemon: PokemonObject[];
 }

@@ -3,7 +3,27 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import styles from './DetailedPokemon.module.css';
 
-const DetailedPokemon = (props: any) => {
+interface DetailedPokemonProps {
+	location: {
+		state: {
+			id: number;
+			name: string;
+			image: string;
+		};
+	};
+	pokemonAbilities: object[];
+	allAbilities: object[];
+}
+
+interface Abilities {
+	pokemon_id: number;
+}
+
+interface AllAbilities {
+	id: number;
+}
+
+const DetailedPokemon: React.FC<DetailedPokemonProps> = (props) => {
 	return (
 		<div className={styles.detailedPokemon__container}>
 			<Link to='/' className={styles.detailedPokemon__previous}>
