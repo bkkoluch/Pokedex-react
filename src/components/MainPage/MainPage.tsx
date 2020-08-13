@@ -2,12 +2,17 @@ import React from 'react';
 import './MainPage.css';
 
 import Pokedex from 'components/Pokedex/Pokedex';
+import Header from 'components/Header/Header';
 
-export default function MainPage() {
+interface MainPageProps {}
+
+const MainPage: React.FC<MainPageProps> = () => {
 	return (
 		<div>
-			<p>Search through the Pokedex for info about the Pokemon</p>
+			<Header />
 			<Pokedex />
 		</div>
 	);
-}
+};
+
+export default MainPage;

@@ -5,6 +5,8 @@ import Pokemon from 'components/Pokemon/Pokemon';
 import { connect } from 'react-redux';
 
 export interface PokemonObject {
+	pokemon: any;
+	key: any;
 	id: number;
 	name: string;
 	image: string;
@@ -12,11 +14,17 @@ export interface PokemonObject {
 	identifier: string;
 }
 
-type State = {
-	pokemon: any;
-};
+interface Pok {
+	pokemon: PokemonObject[];
+}
 
-const Pokedex = (props: any) => {
+interface State {
+	pokemon: {
+		pokemonData: PokemonObject[];
+	};
+}
+
+const Pokedex: React.FC<Pok> = (props) => {
 	return (
 		<div>
 			<ul className={styles.pokedex__container}>
@@ -39,7 +47,7 @@ const Pokedex = (props: any) => {
 };
 
 const mapStateToProps = (state: State) => ({
-	pokemon: state.pokemon.pokemon,
+	pokemon: state.pokemon.pokemonData,
 });
 
 export default connect(mapStateToProps)(Pokedex);

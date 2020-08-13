@@ -1,8 +1,15 @@
 import { GET_ALL_POKEMON_DATA } from 'actions/types';
 
-const initialState = {
-	pokemon: [],
+interface initialState {
+	pokemonData: object[];
+	pokemonAbilities: object[];
+	allAbilities: object[];
+}
+
+const initialState: initialState = {
+	pokemonData: [],
 	pokemonAbilities: [],
+	allAbilities: [],
 };
 
 const pokemonReducer = (state = initialState, action: any) => {
@@ -10,7 +17,7 @@ const pokemonReducer = (state = initialState, action: any) => {
 		case GET_ALL_POKEMON_DATA:
 			return {
 				...state,
-				pokemon: action.payload.pokemonData,
+				pokemonData: action.payload.pokemonData,
 				pokemonAbilities: action.payload.pokemonAbilities,
 				allAbilities: action.payload.allAbilities,
 			};

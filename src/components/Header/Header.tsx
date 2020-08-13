@@ -1,5 +1,9 @@
 import React from 'react';
 
-export default function Header() {
-	return <div></div>;
-}
+interface HeaderProps {}
+
+const Header: React.FC<HeaderProps> = () => {
+	return <p>Search through the Pokedex for info about the Pokemon</p>;
+};
+
+export default Header;
