@@ -1,8 +1,6 @@
 import React from 'react';
 
-interface HeaderProps {}
-
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC = () => {
 	return <p>Search through the Pokedex for info about the Pokemon</p>;
 };
 

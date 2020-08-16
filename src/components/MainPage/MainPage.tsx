@@ -4,9 +4,7 @@ import './MainPage.css';
 import Pokedex from 'components/Pokedex/Pokedex';
 import Header from 'components/Header/Header';
 
-interface MainPageProps {}
-
-const MainPage: React.FC<MainPageProps> = () => {
+const MainPage: React.FC = () => {
 	return (
 		<div>
 			<Header />

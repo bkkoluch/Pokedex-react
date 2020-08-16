@@ -1,20 +1,25 @@
-import { GET_ALL_POKEMON_DATA } from 'actions/types';
+import { Type } from 'actions/types';
 
-interface initialState {
+interface PokemonState {
 	pokemonData: object[];
 	pokemonAbilities: object[];
 	allAbilities: object[];
 }
 
-const initialState: initialState = {
+interface Action {
+	type: Type;
+	payload: PokemonState;
+}
+
+const initialState: PokemonState = {
 	pokemonData: [],
 	pokemonAbilities: [],
 	allAbilities: [],
 };
 
-const pokemonReducer = (state = initialState, action: any) => {
+const pokemonReducer = (state = initialState, action: Action) => {
 	switch (action.type) {
-		case GET_ALL_POKEMON_DATA:
+		case Type.GET_ALL_POKEMON_DATA:
 			return {
 				...state,
 				pokemonData: action.payload.pokemonData,
