@@ -1,5 +1,5 @@
 import { Dispatch } from 'react';
-import { GET_ALL_POKEMON_DATA } from './types';
+import { Type } from './types';
 
 import pokemonData from 'assets/pokemon/pokemon.json';
 import pokemonAbilities from 'assets/pokemon/pokemonAbilities.json';
@@ -10,12 +10,12 @@ const getAllPokemonData = (
 	pokemonAbilities: object[],
 	allAbilities: object[]
 ): object => ({
-	type: GET_ALL_POKEMON_DATA,
+	type: Type.GET_ALL_POKEMON_DATA,
 	payload: { pokemonData, pokemonAbilities, allAbilities },
 });
 
 export const fetchPokemonData = () => {
-	return (dispatch: Dispatch<any>) => {
+	return (dispatch: Dispatch<object>) => {
 		dispatch(getAllPokemonData(pokemonData, pokemonAbilities, allAbilities));
 	};
 };

@@ -5,7 +5,6 @@ import Pokemon from 'components/Pokemon/Pokemon';
 import { connect } from 'react-redux';
 
 export interface PokemonObject {
-	pokemon: any;
 	key: any;
 	id: number;
 	name: string;
