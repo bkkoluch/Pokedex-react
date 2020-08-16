@@ -15,12 +15,25 @@ interface DetailedPokemonProps {
 	allAbilities: object[];
 }
 
-interface Abilities {
-	pokemon_id: number;
+interface DetailedPokemonState {
+	pokemon: {
+		pokemonAbilities: object[];
+		allAbilities: object[];
+	};
 }
 
-interface AllAbilities {
+interface Ability {
+	pokemon_id: number;
+	is_hidden: number;
+	ability_id: number;
+	slot: number;
+}
+
+interface RealAbility {
+	generation_id: number;
 	id: number;
+	identifier: string;
+	is_main_series: number;
 }
 
 const DetailedPokemon: React.FC<DetailedPokemonProps> = (props) => {
@@ -44,6 +57,7 @@ const DetailedPokemon: React.FC<DetailedPokemonProps> = (props) => {
 					{props.pokemonAbilities.map((ability: any) =>
 						ability.pokemon_id === props.location.state.id
 							? props.allAbilities.map((realAbility: any) => {
+									console.log(ability);
 									return ability.ability_id === realAbility.id ? (
 										<p key={ability}>{realAbility.identifier}</p>
 									) : (
@@ -58,7 +72,7 @@ const DetailedPokemon: React.FC<DetailedPokemonProps> = (props) => {
 	);
 };
 
-const mapStateToProps = (state: any) => ({
+const mapStateToProps = (state: DetailedPokemonState) => ({
 	pokemonAbilities: state.pokemon.pokemonAbilities,
 	allAbilities: state.pokemon.allAbilities,
 });

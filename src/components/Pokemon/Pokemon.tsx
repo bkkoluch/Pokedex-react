@@ -2,7 +2,14 @@ import React from 'react';
 import styles from './Pokemon.module.css';
 import { Link } from 'react-router-dom';
 
-export default function Pokemon(props: any) {
+interface PokemonProps {
+	id: number;
+	name: string;
+	image: string;
+	imageBack: string;
+}
+
+const Pokemon: React.FC<PokemonProps> = (props) => {
 	return (
 		<Link
 			to={{
@@ -28,4 +35,6 @@ export default function Pokemon(props: any) {
 			<h5 className={styles.pokemon__name}>{props.name}</h5>
 		</Link>
 	);
-}
+};
+
+export default Pokemon;
