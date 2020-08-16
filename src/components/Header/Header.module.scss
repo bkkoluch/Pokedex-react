@@ -1,0 +1,63 @@
+@import '../../utils/variables.scss';
+
+.header__container {
+	display: flex;
+	justify-content: space-around;
+	margin: 24px 0;
+}
+
+.header__link {
+	position: relative;
+	width: 100px;
+	line-height: 50px;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: bold;
+	transition: all 0.5s;
+	color: black;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		height: 0;
+		width: 0;
+		background: $fierce;
+		transition: all 0.7s;
+	}
+
+	&:before {
+		top: 0;
+		left: 0;
+	}
+
+	&:after {
+		bottom: 0;
+		right: 0;
+	}
+
+	&:hover {
+		&::before,
+		&::after {
+			display: block;
+			width: 100%;
+			height: 2px;
+			background-color: $fierce;
+		}
+	}
+}
+
+.header__input {
+	height: 50px;
+	transition: 0.5s;
+
+	&:hover {
+		opacity: 0.5;
+	}
+
+	&:focus {
+		border: 2px solid $fierce;
+	}
+}

@@ -23,49 +23,6 @@
   text-transform: uppercase;
 }
 
-.detailedPokemon__previous {
-  position: relative;
-  width: 100px;
-  line-height: 50px;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 24px;
-  font-weight: bold;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  color: black;
-}
-
-.detailedPokemon__previous::before, .detailedPokemon__previous::after {
-  content: '';
-  position: absolute;
-  height: 0;
-  width: 0;
-  background: #be4646;
-  -webkit-transition: all 0.7s;
-  transition: all 0.7s;
-}
-
-.detailedPokemon__previous:before {
-  top: 0;
-  left: 0;
-}
-
-.detailedPokemon__previous:after {
-  bottom: 0;
-  right: 0;
-}
-
-.detailedPokemon__previous:hover::before, .detailedPokemon__previous:hover::after {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: #be4646;
-}
-
 .detailedPokemon__card {
   width: 50%;
   display: inherit;
