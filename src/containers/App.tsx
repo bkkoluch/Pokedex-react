@@ -7,7 +7,7 @@ import { fetchPokemonData } from 'actions/pokemonActions';
 import MainPage from 'components/MainPage/MainPage';
 import DetailedPokemon from 'components/Pokemon/DetailedPokemon/DetailedPokemon';
 
-const App = () => {
+const App: React.FC = () => {
 	const dispatch = useDispatch();
 	dispatch(fetchPokemonData());
 
