@@ -1,5 +1,4 @@
-$fierce: rgb(190, 70, 70);
-$dark: rgb(60, 60, 60);
+@import '../../../utils/variables.scss';
 
 .detailedPokemon__container {
 	display: flex;
@@ -15,50 +14,6 @@ $dark: rgb(60, 60, 60);
 .detailedPokemon__name {
 	font-size: 2rem;
 	text-transform: uppercase;
-}
-
-.detailedPokemon__previous {
-	position: relative;
-	width: 100px;
-	line-height: 50px;
-	align-self: flex-start;
-	text-align: center;
-	text-transform: uppercase;
-	text-decoration: none;
-	font-size: 24px;
-	font-weight: bold;
-	transition: all 0.5s;
-	color: black;
-
-	&::before,
-	&::after {
-		content: '';
-		position: absolute;
-		height: 0;
-		width: 0;
-		background: $fierce;
-		transition: all 0.7s;
-	}
-
-	&:before {
-		top: 0;
-		left: 0;
-	}
-
-	&:after {
-		bottom: 0;
-		right: 0;
-	}
-
-	&:hover {
-		&::before,
-		&::after {
-			display: block;
-			width: 100%;
-			height: 2px;
-			background-color: $fierce;
-		}
-	}
 }
 
 .detailedPokemon__card {
