@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ detailed }) => {
 			<Link className={styles.header__link} to={ROUTES.ROOT}>
 				Home
 			</Link>
-			<Link className={styles.header__link} to={ROUTES.ROOT}>
+			<Link className={styles.header__link} to={ROUTES.POKEMON_LIST}>
 				List
 			</Link>
 			{!detailed ? (
