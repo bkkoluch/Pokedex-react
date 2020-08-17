@@ -7,6 +7,9 @@ import { ROUTES } from 'utils/utils';
 
 import MainPage from 'components/MainPage/MainPage';
 import DetailedPokemon from 'components/Pokemon/DetailedPokemon/DetailedPokemon';
+import List from 'components/List/List';
+
+import './App.css';
 
 const App: React.FC = () => {
 	const dispatch = useDispatch();
@@ -17,6 +20,7 @@ const App: React.FC = () => {
 			<Switch>
 				<Route path={ROUTES.ROOT} exact component={MainPage} />
 				<Route path={ROUTES.DETAILED_POKEMON} component={DetailedPokemon} />
+				<Route path={ROUTES.POKEMON_LIST} component={List} />
 			</Switch>
 		</BrowserRouter>
 	);

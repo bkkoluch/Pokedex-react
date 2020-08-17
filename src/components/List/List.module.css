@@ -1,0 +1,78 @@
+.List__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 30px;
+}
+
+.List__table__row,
+.List__table__row--main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 3px solid black;
+  background-color: #be4646;
+}
+
+.List__table__row td,
+.List__table__row th,
+.List__table__row--main td,
+.List__table__row--main th {
+  min-width: 80px;
+}
+
+.List__table__row {
+  background-color: #3c3c3c;
+  color: white;
+}
+
+summary {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+summary:hover {
+  background-color: #3c3c3c;
+  color: white;
+}
+
+summary:focus {
+  color: black;
+  outline: none;
+  background-color: transparent;
+}
+
+@media (max-width: 791px) {
+  .List__container {
+    margin-top: 300px;
+  }
+  .List__table__row,
+  .List__table__row--main {
+    width: 100%;
+  }
+  .List__table__row td,
+  .List__table__row th,
+  .List__table__row--main td,
+  .List__table__row--main th {
+    min-width: 100%;
+    text-align: center;
+  }
+  .List__table__row--main {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .List__table__row,
+  .List__table__row--main {
+    width: calc(100% - 6px);
+  }
+}

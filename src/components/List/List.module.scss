@@ -1,0 +1,69 @@
+@import '../../utils/variables.scss';
+
+$border_width: 3px;
+
+.List__container {
+	display: flex;
+	flex-direction: column;
+	font-size: 30px;
+}
+
+.List__table__row,
+.List__table__row--main {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	border: $border_width solid black;
+	background-color: $fierce;
+	td,
+	th {
+		min-width: 80px;
+	}
+}
+
+.List__table__row {
+	background-color: $dark;
+	color: white;
+}
+
+summary {
+	transition: 0.5s;
+
+	&:hover {
+		background-color: $dark;
+		color: white;
+	}
+
+	&:focus {
+		color: black;
+		outline: none;
+		background-color: transparent;
+	}
+}
+
+@media (max-width: 791px) {
+	.List__container {
+		margin-top: 300px;
+	}
+
+	.List__table__row,
+	.List__table__row--main {
+		width: 100%;
+		td,
+		th {
+			min-width: 100%;
+			text-align: center;
+		}
+	}
+
+	.List__table__row--main {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	.List__table__row,
+	.List__table__row--main {
+		width: calc(100% - 6px);
+	}
+}

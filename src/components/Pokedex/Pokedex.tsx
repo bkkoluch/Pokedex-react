@@ -18,7 +18,7 @@ interface Pok {
 	searchedPokemon: string;
 }
 
-interface State {
+interface PokedexState {
 	pokemon: {
 		pokemonData: PokemonObject[];
 		searchedPokemon: string;
@@ -65,7 +65,7 @@ const Pokedex: React.FC<Pok> = (props) => {
 	);
 };
 
-const mapStateToProps = (state: State) => ({
+const mapStateToProps = (state: PokedexState) => ({
 	pokemon: state.pokemon.pokemonData,
 	searchedPokemon: state.pokemon.searchedPokemon,
 });
