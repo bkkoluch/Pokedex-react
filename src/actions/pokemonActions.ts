@@ -19,3 +19,8 @@ export const fetchPokemonData = () => {
 		dispatch(getAllPokemonData(pokemonData, pokemonAbilities, allAbilities));
 	};
 };
+
+export const searchForPokemon = (searchedPokemon: string): object => ({
+	type: Type.SEARCH_FOR_POKEMON,
+	payload: { searchedPokemon },
+});

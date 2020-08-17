@@ -55,7 +55,6 @@ const DetailedPokemon: React.FC<DetailedPokemonProps> = (props) => {
 						{props.pokemonAbilities.map((ability: any) =>
 							ability.pokemon_id === props.location.state.id
 								? props.allAbilities.map((realAbility: any) => {
-										console.log(ability);
 										return ability.ability_id === realAbility.id ? (
 											<p key={ability}>{realAbility.identifier}</p>
 										) : (

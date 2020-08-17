@@ -4,6 +4,7 @@ interface PokemonState {
 	pokemonData: object[];
 	pokemonAbilities: object[];
 	allAbilities: object[];
+	searchedPokemon: string;
 }
 
 interface Action {
@@ -15,6 +16,7 @@ const initialState: PokemonState = {
 	pokemonData: [],
 	pokemonAbilities: [],
 	allAbilities: [],
+	searchedPokemon: '',
 };
 
 const pokemonReducer = (state = initialState, action: Action) => {
@@ -25,6 +27,11 @@ const pokemonReducer = (state = initialState, action: Action) => {
 				pokemonData: action.payload.pokemonData,
 				pokemonAbilities: action.payload.pokemonAbilities,
 				allAbilities: action.payload.allAbilities,
+			};
+		case Type.SEARCH_FOR_POKEMON:
+			return {
+				...state,
+				searchedPokemon: action.payload.searchedPokemon,
 			};
 		default:
 			return state;
