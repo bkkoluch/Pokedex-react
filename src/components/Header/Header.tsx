@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
@@ -13,10 +13,10 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ detailed }) => {
 	const dispatch = useDispatch();
 	const [input, setInput] = useState('');
+	dispatch(searchForPokemon(input));
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setInput(e.target.value);
-		dispatch(searchForPokemon(input));
 	};
 
 	return (
