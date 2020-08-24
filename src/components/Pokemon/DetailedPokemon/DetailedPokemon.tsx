@@ -9,6 +9,8 @@ interface DetailedPokemonProps {
 			id: number;
 			name: string;
 			image: string;
+			height: number;
+			weight: number;
 		};
 	};
 	pokemonAbilities: object[];
@@ -63,6 +65,10 @@ const DetailedPokemon: React.FC<DetailedPokemonProps> = (props) => {
 								  })
 								: ''
 						)}
+					</div>
+					<div className={styles.detailedPokemon__details}>
+						<p>Height: {props.location.state.height} M</p>
+						<p>Weight: {props.location.state.weight} KGs</p>
 					</div>
 				</div>
 			</div>

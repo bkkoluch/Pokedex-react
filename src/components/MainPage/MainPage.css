@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 body {
   font-family: 'Indie Flower', cursive;
-  background-color: lightskyblue;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(204, 0, 0, 0.543855)), color-stop(35%, rgba(59, 76, 202, 0.535452)), to(rgba(255, 222, 0, 0.608281)));
+  background: linear-gradient(90deg, rgba(204, 0, 0, 0.543855) 0%, rgba(59, 76, 202, 0.535452) 35%, rgba(255, 222, 0, 0.608281) 100%);
 }
 
 p {
