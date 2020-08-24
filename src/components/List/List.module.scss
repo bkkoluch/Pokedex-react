@@ -6,6 +6,7 @@ $border_width: 3px;
 	display: flex;
 	flex-direction: column;
 	font-size: 30px;
+	margin-top: 52px;
 }
 
 .List__table__row,
@@ -19,6 +20,13 @@ $border_width: 3px;
 	th {
 		min-width: 80px;
 	}
+}
+
+.List__table__row--main {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 .List__table__row {
@@ -41,6 +49,10 @@ summary {
 	}
 }
 
+details {
+	cursor: pointer;
+}
+
 @media (max-width: 791px) {
 	.List__container {
 		margin-top: 300px;
@@ -54,12 +66,6 @@ summary {
 			min-width: 100%;
 			text-align: center;
 		}
-	}
-
-	.List__table__row--main {
-		position: fixed;
-		top: 0;
-		left: 0;
 	}
 
 	.List__table__row,
