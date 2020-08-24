@@ -7,6 +7,8 @@ interface PokemonProps {
 	name: string;
 	image: string;
 	imageBack: string;
+	height: number;
+	weight: number;
 }
 
 const Pokemon: React.FC<PokemonProps> = (props) => {
@@ -18,6 +20,8 @@ const Pokemon: React.FC<PokemonProps> = (props) => {
 					name: props.name,
 					image: props.image,
 					id: props.id,
+					height: props.height,
+					weight: props.weight,
 				},
 			}}
 			className={styles.pokemon__container}

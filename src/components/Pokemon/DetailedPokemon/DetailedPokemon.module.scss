@@ -29,7 +29,17 @@
 	font-weight: bold;
 	text-align: center;
 	p {
-		font-weight: normal;
+		font-weight: bold;
+		margin: 10px;
+		color: $fierce;
+	}
+}
+
+.detailedPokemon__details {
+	margin-bottom: 16px;
+	font-weight: bold;
+	p {
+		margin: 0;
 	}
 }
 

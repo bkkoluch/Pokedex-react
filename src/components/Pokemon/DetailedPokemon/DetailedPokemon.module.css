@@ -43,7 +43,18 @@
 }
 
 .detailedPokemon__skills p {
-  font-weight: normal;
+  font-weight: bold;
+  margin: 10px;
+  color: #be4646;
+}
+
+.detailedPokemon__details {
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.detailedPokemon__details p {
+  margin: 0;
 }
 
 @media screen and (max-width: 414px) {

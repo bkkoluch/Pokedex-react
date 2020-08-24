@@ -11,6 +11,8 @@ export interface PokemonObject {
 	image: string;
 	imageBack: string;
 	identifier: string;
+	height: number;
+	weight: number;
 }
 
 interface Pok {
@@ -41,6 +43,8 @@ const Pokedex: React.FC<Pok> = (props) => {
 								imageBack={require('../../assets/sprites/pokemonFromTheBack/' +
 									`${index + 1}` +
 									'.png')}
+								height={pokemon.height}
+								weight={pokemon.weight}
 							/>
 					  ))
 					: props.pokemon.map((pokemon: PokemonObject, index: number) =>
@@ -55,6 +59,8 @@ const Pokedex: React.FC<Pok> = (props) => {
 									imageBack={require('../../assets/sprites/pokemonFromTheBack/' +
 										`${index + 1}` +
 										'.png')}
+									height={pokemon.height}
+									weight={pokemon.weight}
 								/>
 							) : (
 								''
