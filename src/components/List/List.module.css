@@ -38,21 +38,6 @@
   left: 0;
 }
 
-.List__table__row {
-  background-color: #3c3c3c;
-  color: white;
-}
-
-summary {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-summary:hover {
-  background-color: #3c3c3c;
-  color: white;
-}
-
 summary:focus {
   color: black;
   outline: none;
