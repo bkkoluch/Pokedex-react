@@ -27,44 +27,32 @@ interface PokedexState {
 	};
 }
 
+const pokemonComponent = (pokemon: PokemonObject, index: number) => (
+	<Pokemon
+		key={pokemon.id}
+		id={pokemon.id}
+		name={pokemon.identifier}
+		image={require('../../assets/sprites/pokemon/' + `${index + 1}` + '.png')}
+		imageBack={require('../../assets/sprites/pokemonFromTheBack/' +
+			`${index + 1}` +
+			'.png')}
+		height={pokemon.height}
+		weight={pokemon.weight}
+	/>
+);
+
 const Pokedex: React.FC<Pok> = (props) => {
 	return (
 		<div>
 			<ul className={styles.pokedex__container}>
 				{props.searchedPokemon === ''
-					? props.pokemon.map((pokemon: PokemonObject, index: number) => (
-							<Pokemon
-								key={pokemon.id}
-								id={pokemon.id}
-								name={pokemon.identifier}
-								image={require('../../assets/sprites/pokemon/' +
-									`${index + 1}` +
-									'.png')}
-								imageBack={require('../../assets/sprites/pokemonFromTheBack/' +
-									`${index + 1}` +
-									'.png')}
-								height={pokemon.height}
-								weight={pokemon.weight}
-							/>
-					  ))
+					? props.pokemon.map((pokemon: PokemonObject, index: number) =>
+							pokemonComponent(pokemon, index)
+					  )
 					: props.pokemon.map((pokemon: PokemonObject, index: number) =>
-							pokemon.identifier.includes(props.searchedPokemon) ? (
-								<Pokemon
-									key={pokemon.id}
-									id={pokemon.id}
-									name={pokemon.identifier}
-									image={require('../../assets/sprites/pokemon/' +
-										`${index + 1}` +
-										'.png')}
-									imageBack={require('../../assets/sprites/pokemonFromTheBack/' +
-										`${index + 1}` +
-										'.png')}
-									height={pokemon.height}
-									weight={pokemon.weight}
-								/>
-							) : (
-								''
-							)
+							pokemon.identifier.includes(props.searchedPokemon)
+								? pokemonComponent(pokemon, index)
+								: ''
 					  )}
 			</ul>
 		</div>

@@ -29,19 +29,7 @@ $border_width: 3px;
 	left: 0;
 }
 
-.List__table__row {
-	background-color: $dark;
-	color: white;
-}
-
 summary {
-	transition: 0.5s;
-
-	&:hover {
-		background-color: $dark;
-		color: white;
-	}
-
 	&:focus {
 		color: black;
 		outline: none;
